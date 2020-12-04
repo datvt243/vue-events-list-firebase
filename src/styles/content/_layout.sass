@@ -1,0 +1,64 @@
+@charset "utf-8"
+
+.container-wrappper
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  min-height: 100vh
+  margin-top: 0
+.header-wrapper 
+  margin: 30px 0
+  .project-name
+    font-weight: 700
+    letter-spacing: .05em
+  .navbar
+    color: #fff
+    box-shadow: none
+    background-color: rgba(17, 167, 224, .5)
+    padding: 10px
+    border:
+      radius: $radius
+.main-wrapper 
+  flex-grow: 1
+  position: relative
+.footer-wrapper 
+  text-align: center
+  font-size: 12px
+  letter-spacing: .05em
+  margin-top: 30px
+  .container
+    > p
+      padding: 2rem 0
+      border-top: .1rem solid rgba(255, 255, 255, .1)
+
+.d-flex
+  $val: 5px
+  margin: 
+    left: -#{$val}
+    right: -#{$val}
+  > *
+    padding: 
+      left: #{$val}
+      right: #{$val}
+
+.box-inner
+  border: 1px solid rgba(255, 255, 255, 0.1)
+  padding: 20px
+  margin-bottom: 20px
+
+.ck.ck-editor
+  color: #fff
+.ck.ck-editor__main>.ck-editor__editable
+  background: #2f2f2f !important
+.ck.ck-editor__editable_inline
+  min-height: 200px      
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused)
+  border: 1px solid rgba(0, 0, 0, 0.4) !important
+
++sm
+
+  .row
+
+    &.margin
+      > *
+        margin-bottom: 20px

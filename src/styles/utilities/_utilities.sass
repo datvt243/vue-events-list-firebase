@@ -1,0 +1,91 @@
+@charset "utf-8"
+
+$widths: 25, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 170, 200, 250, 300, 400, 500, 700, 800
+$widths-min: 100, 150, 200, 300, 400
+.w
+
+  &-full
+    width: 100% !important
+    max-width: 100% !important
+
+  @each $width in $widths
+    &-#{$width}
+      width: #{$width}px !important
+
+  @each $width in $widths-min
+    &-min-#{$width}
+      min-width: #{$width}px !important
+
+.margin
+  &-b10
+    margin-bottom: 10px !important
+  &-b20
+    margin-bottom: 20px !important
+  &-b30
+    margin-bottom: 30px !important
+
+
+h1, h2, h3, h4, h5, h6
+  line-height: 1.4
+  font:
+    weight: 700
+
+.hr, hr
+  border: 0
+    bottom: 1px solid
+
+strong, .strong
+  font-weight: 700
+
+small, .small
+  font-size: .9em
+
+a
+  color: $base-font-color
+  text-decoration: none
+
+img
+  max-width: 100%
+  vertical-align: middle
+
+.del
+  text-decoration: line-through
+
+.trans
+  transition: opacity .3s ease
+  &:hover
+    opacity: .7
+
+.nowrap
+  white-space: nowrap !important
+
+.pointer
+  cursor: pointer
+
+.hidden
+  display: none
+
+.invisible
+  visibility: hidden
+
+.relative
+  position: relative
+
+.wrapper
+  margin: 
+    left: auto
+    right: auto
+  &:not(:last-child)
+    margin-bottom: 30px
+
++lg
+  .lg-hidden
+    display: none !important
++md
+  .md-hidden
+    display: none !important
++sm
+  .sm-hidden
+    display: none !important
+
+

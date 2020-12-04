@@ -1,0 +1,20 @@
+@charset "utf-8"
+
+.badge
+  display: inline-block
+  line-height: 1
+  padding: 5px 10px
+  font-size: 14px
+  background-color: $success
+  border-radius: $radius
+
+  @each $name, $value in $colors
+
+    &.is-#{$name}
+      color: #fff
+      border-color: $value
+      background-color: $value !important
+    &.is-#{$name}-light
+      color: $value
+      border-color: $value
+      background-color: #fff

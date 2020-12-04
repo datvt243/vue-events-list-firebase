@@ -1,0 +1,30 @@
+@charset "utf-8"
+  
+.nav-wrapper
+  padding: 10px 0
+  font:
+    size: 20px
+    weight: 700
+  border-bottom: 2px solid rgba(0,0,0,.2)
+  margin-bottom: 20px
+
+  .list
+    display: flex
+    $val: 15px
+    margin:
+      left: -#{$val}
+      right: -#{$val}
+    > *
+      padding:
+        left: #{$val}
+        right: #{$val}
+    .link
+      display: inline-block
+      font-weight: bold
+      color: $base-font-color
+      transition: all .3s ease
+      &:hover
+        color: #42b983
+
+    .router-link-exact-active
+      color: #42b983
